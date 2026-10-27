@@ -30,3 +30,6 @@ README_backup_*.md
 # Arquivos temporarios do Power BI
 *.pbit.tmp
 *.pbix.tmp
+
+# Versao intermediaria do dashboard Power BI
+powerbi/PNCP_Controladoria_P1_P2_Concluidas.pbix
