@@ -324,7 +324,21 @@ O planejamento, a evolução das atividades, os checklists, os impedimentos e as
 
 [Consultar o quadro do Projeto Avaliativo SCTEC no Trello](https://trello.com/b/8pQw4NST/sctec-modulo-ii-projeto-avaliativo-semana-13)
 
+
+### Histórico de versionamento e integração das Sprints
+
+O versionamento do Projeto Avaliativo SCTEC foi realizado com Git, utilizando a branch `main` para consolidar as entregas e branches específicas para organizar os arquivos das etapas técnicas.
+
+Foram registrados commits descritivos, com mensagens no modo imperativo. A integração das branches foi realizada com `git merge --no-ff`, preservando a identificação das Sprints no histórico.
+
+A figura apresenta a árvore de commits desde a configuração inicial até o commit `02cd37c`, incluindo as Sprints 2 a 7 e a incorporação dos arquivos CSV.
+
+![Histórico de commits do Projeto Avaliativo SCTEC](docs/img/historico_git.png)
+
+**Observação:** o histórico representa a consolidação do projeto no Git. As branches foram organizadas durante essa consolidação e não representam, necessariamente, as datas originais de desenvolvimento de cada Sprint. Os commits posteriores à captura poderão ser consultados diretamente no repositório GitHub.
+
 ## 8. Guia de reprodução
+
 
 ### 8.1 Pré-requisitos
 
