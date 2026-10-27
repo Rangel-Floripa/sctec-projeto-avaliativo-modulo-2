@@ -1,0 +1,32 @@
+# Ambiente virtual Python
+.venv/
+venv/
+
+# Cache e arquivos temporários Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Variáveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Configurações locais do editor
+.vscode/
+
+# Logs
+*.log
+# Copias de seguranca locais
+data/backup_*/
+README_backup_*.md
+
+# Arquivos temporarios do Power BI
+*.pbit.tmp
+*.pbix.tmp
