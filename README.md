@@ -372,7 +372,41 @@ python -m src.carregar
 
 **Não execute esse comando contra um banco com dados que precise preservar.** Antes, revise `src/config.py`, confirme o banco de destino, providencie uma cópia de segurança e teste em ambiente isolado. O script utiliza `sql/01_criar_banco.sql`, carrega primeiro as dimensões e depois a fato.
 
-**Estado de validação:** a linha de contagem `SELECT COUNT(*) FROM {tabela}` foi corrigida, passou em `py_compile` e foi testada em consultas isoladas. **A reconstrução integrada do banco ainda não foi testada depois da correção**; não é correto apresentá-la como reprodução integral já comprovada.
+**Estado de validação — 28/10/2026:** foi realizado com sucesso um teste integrado de reconstrução e carga do PostgreSQL, utilizando o banco isolado `pncp_controladoria_teste`.
+
+O procedimento executou a criação do banco e das tabelas, seguida da carga das quatro dimensões e da tabela fato, com os seguintes resultados:
+
+| Tabela | Registros carregados | Conferência |
+|---|---:|---|
+| `dim_orgao` | 363 | OK |
+| `dim_fornecedor` | 2.652 | OK |
+| `dim_modalidade` | 7 | OK |
+| `dim_localidade` | 27 | OK |
+| `fato_item_contratado` | 6.126 | OK |
+
+**Resultado:** as cinco tabelas foram carregadas com sucesso, e todas as contagens coincidiram com os valores de referência.
+
+**Segurança da execução:** o teste utilizou a variável de ambiente `PG_DATABASE` configurada temporariamente para `pncp_controladoria_teste`, sem modificar o arquivo `.env` original nem direcionar a recriação ao banco principal `pncp_controladoria`.
+
+**Validação complementar — 28/10/2026:** após a reconstrução do banco `pncp_controladoria_teste`, foram executadas consultas SQL exclusivamente de leitura para conferir os indicadores financeiros e a integridade referencial.
+
+| Indicador | Resultado |
+|---|---:|
+| Itens contratados | 6.126 |
+| Volume total homologado | R$ 8.044.498.805,74 |
+| Itens comparáveis | 5.457 |
+| Economia identificada | R$ 992.861.686,95 |
+| Itens sem ciclo calculável | 230 |
+| Referências sem correspondência em `dim_orgao` | 0 |
+| Referências sem correspondência em `dim_fornecedor` | 0 |
+| Referências sem correspondência em `dim_modalidade` | 0 |
+| Referências sem correspondência em `dim_localidade` | 0 |
+
+**Conclusão:** a reconstrução integrada reproduziu as contagens das cinco tabelas, os principais indicadores financeiros e a integridade referencial do modelo dimensional, de acordo com os resultados de referência do projeto.
+
+**Limite da validação:** os testes realizados confirmam os indicadores e relacionamentos explicitamente verificados, mas não constituem uma auditoria exaustiva de todos os registros e regras de negócio.
+
+**Atenção:** a execução de `python -m src.carregar` continua sendo potencialmente destrutiva para o banco configurado como destino. Antes de utilizá-la, confirme o valor de `PG_DATABASE` e mantenha cópias de segurança dos dados importantes.
 
 ### 8.4 Executar consultas de negócio
 
