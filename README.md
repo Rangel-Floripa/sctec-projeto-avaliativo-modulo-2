@@ -410,7 +410,7 @@ O histórico original foi preservado em backup privado durante a preparação da
 
 A apresentação final será realizada em **vídeo de até 7 minutos**, no formato de revisão técnica do projeto, abordando problema, planejamento, dados, tratamento, modelagem, validações, indicadores, Power BI e decisões técnicas.
 
-**Vídeo de apresentação (Google Drive):** *inserir aqui o link público de visualização quando estiver disponível*.
+**Vídeo de apresentação:** [Assistir à defesa técnica — WATCHME.mp4](docs/WATCHME.mp4)
 
 **Repositório GitHub:** *inserir aqui a URL pública após a publicação e validação*.
 
