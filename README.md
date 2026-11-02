@@ -410,9 +410,11 @@ O histórico original foi preservado em backup privado durante a preparação da
 
 A apresentação final será realizada em **vídeo de até 7 minutos**, no formato de revisão técnica do projeto, abordando problema, planejamento, dados, tratamento, modelagem, validações, indicadores, Power BI e decisões técnicas.
 
-**Vídeo de apresentação:** [Assistir à defesa técnica — WATCHME.mp4](docs/WATCHME.mp4)
+**Vídeo de apresentação (Google Drive):** [Assistir à defesa técnica do Projeto SCTEC](https://drive.google.com/file/d/10Zh3667KpqCjnc9jbV486RncFS_hU6EG/view?usp=sharing)
 
-**Repositório GitHub:** *inserir aqui a URL pública após a publicação e validação*.
+**Vídeo no repositório:** [WATCHME.mp4](docs/WATCHME.mp4)
+
+**Repositório GitHub:** [Projeto Avaliativo SCTEC — Módulo II](https://github.com/Rangel-Floripa/sctec-projeto-avaliativo-modulo-2)
 
 ### Checklist final
 
@@ -424,8 +426,8 @@ A apresentação final será realizada em **vídeo de até 7 minutos**, no form
 - [ ] Confirmar autorização e condições de redistribuição do kit didático e conferir dados pessoais/credenciais antes de torná-lo público.
 - [ ] Publicar o repositório em **modo público**, com versão final na branch `main`.
 - [ ] Testar o acesso ao GitHub em uma **janela anônima**.
-- [ ] Disponibilizar o vídeo no Google Drive como **leitor para qualquer pessoa com o link**.
-- [ ] Testar o acesso ao vídeo em uma **janela anônima**.
+- [x] Disponibilizar o vídeo no Google Drive como **leitor para qualquer pessoa com o link**.
+- [x] Testar o acesso ao vídeo em uma **janela anônima**.
 - [ ] Enviar **os dois links** no AVA até **03/11/2026 às 22h (horário de Brasília)**.
 
 **Após a submissão, evitar novos commits até a correção da avaliação**, conforme a orientação de entrega registrada para o projeto.
